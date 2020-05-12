@@ -1,0 +1,28 @@
+name: pylint
+base: core18
+version: '2.5.1'
+summary: Python code static checker
+description: |
+  Pylint is a Python static code analysis tool which looks for programming
+  errors, helps enforcing a coding standard, sniffs for code smells and
+  offers simple refactoring suggestions.
+  
+  It's highly configurable, having special pragmas to control its errors
+  and warnings from within your code, as well as from an extensive
+  configuration file. It is also possible to write your own plugins for
+  adding your own checks or for extending pylint in one way or another.
+
+grade: devel
+confinement: devmode
+
+apps:
+  pylint:
+    command: pylint
+
+parts:
+  pylint:
+    plugin: python
+    python-version: python3
+    python-packages:
+      - pylint==2.5.1
+
